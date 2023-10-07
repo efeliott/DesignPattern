@@ -1,25 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UrgentTasks = exports.PersonalTasks = exports.ProjectTasks = void 0;
+class SimpleTask {
+}
 // Decorator
-// export class TaskDecorator implements Task {
-//     name: string;
-//     protected notes: Task;
-//     protected labels: Task;
-//     protected priorities: Task;
-//     constructor(notes: Task, labels: Task, priorities: Task){
-//         this.notes = notes;
-//         this.labels = labels;
-//         this.priorities = priorities;
-//     }
-//     // Méthode pour ajouter une tâche
-//     public addTask(Task : Task){
-//         this.notes.addTask(this.notes);
-//         this.notes.addTask(this.labels);
-//         this.notes.addTask(this.priorities);
-//         console.log("Tache mise à jour : " + Task.name);
-//     }
-// }
 class ProjectTasks {
     constructor(name) {
         this.name = name;

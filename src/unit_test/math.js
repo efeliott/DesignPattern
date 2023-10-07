@@ -36,3 +36,21 @@ const calculateFactorial = (n) => {
 }
   
 module.exports = { calculateFactorial };
+
+const transformUsers = (users) => {
+  if(!Array.isArray(users)){
+    throw new Error('Users must be provided.');
+  }
+
+  users.forEach(users => {
+    if (typeof(users) === 'string'){
+      throw new Error('Users must be provided.');
+    }
+  })
+
+  if(users.length > 3){
+    throw new Error('Too many users provided.');
+  }
+}
+
+module.exports = { transformUsers };
