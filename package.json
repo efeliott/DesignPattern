@@ -13,8 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0",
-    "nodemon": "latest",
-    "ts-node": "latest",
-    "typescript": "latest"
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "save-dev": "^0.0.1-security"
   }
 }

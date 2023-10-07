@@ -51,6 +51,16 @@ const transformUsers = (users) => {
   if(users.length > 3){
     throw new Error('Too many users provided.');
   }
+
+  const trasformedUsers = users.map(obj => {
+    const { id, body: { userName, userAge } } = obj;
+    return {
+      id,
+      name: userName,
+      age: userAge,
+    };
+  });
+  return trasformedUsers;
 }
 
 module.exports = { transformUsers };
