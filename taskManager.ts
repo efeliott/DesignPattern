@@ -21,13 +21,13 @@ export class TaskManager{
     // Méthode pour ajouter une tâche
     public addTask(Task : Task){
         this.tasks.push(Task);
-        console.log("Tache ajoutée : " + Task.name);
+        console.log("Tache ajoutée : " + Task.name());
     }
 
     // Méthode pour fermer une tâche
-    closeTask(Task: Task){
-        let indexDelete = this.tasks.indexOf(Task);
+    closeTask(taskToDelete: Task) {
+        const indexDelete = this.tasks.findIndex(task => task.name === taskToDelete.name);
         this.tasks.splice(indexDelete, 1);
-        console.log("Tache suprimée : " + Task.name);
+        console.log("Tache supprimée : " + taskToDelete.name);
     }
 }

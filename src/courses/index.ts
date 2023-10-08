@@ -1,6 +1,6 @@
-import { Student } from "./courses/student";
-import { User, Workers, Administrateur } from "./courses/Worker";
-import { Subscribers, UnionPublisher } from "./courses/newspaper";
+import { Student } from "./student";
+import { User, Workers, Administrateur } from "./Worker";
+import { Subscribers, UnionPublisher } from "./newspaper";
 
 // class StudentAdapter implements User{
 //     username: string;
