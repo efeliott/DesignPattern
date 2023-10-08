@@ -16,13 +16,13 @@ class Publisher {
 }
 exports.Publisher = Publisher;
 exports.UnionPublisher = new Publisher();
-class UnionSubscriber {
-    constructor(name) {
-        this.name = name;
-    }
-    sendNews(news) {
-        console.log(`${this.name} received ${news}`);
-    }
-    ;
-}
+// class UnionSubscriber implements Subscribers{
+//     name: string;
+//     constructor(name: string){
+//         this.name = name;
+//     }
+//     sendNews(news: string): void{
+//         console.log(`${this.name} received ${news}`);
+//     };
+// }
 //# sourceMappingURL=newspaper.js.map
