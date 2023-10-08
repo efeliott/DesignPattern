@@ -28,6 +28,6 @@ export class TaskManager{
     closeTask(taskToDelete: Task) {
         const indexDelete = this.tasks.findIndex(task => task.name === taskToDelete.name);
         this.tasks.splice(indexDelete, 1);
-        console.log("Tache supprimée : " + taskToDelete.name);
+        console.log("Tache supprimée : " + taskToDelete.name());
     }
 }

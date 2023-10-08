@@ -21,7 +21,7 @@ class TaskManager {
     closeTask(taskToDelete) {
         const indexDelete = this.tasks.findIndex(task => task.name === taskToDelete.name);
         this.tasks.splice(indexDelete, 1);
-        console.log("Tache supprimée : " + taskToDelete.name);
+        console.log("Tache supprimée : " + taskToDelete.name());
     }
 }
 exports.TaskManager = TaskManager;
