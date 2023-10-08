@@ -12,8 +12,14 @@ tasks.forEach((task) => {
 // Supprime la première tâche
 taskManager_1.TaskManager.getInstance().closeTask(tasks[0]);
 console.log(tasks);
-const task = new task_1.SimpleTask("Tâche principale");
-const taskWithNote = new task_1.notesDecorator(task, "Ajoutez votre note ici.");
-console.log(taskWithNote.name()); // Affiche: "Tâche principale"
+const task = new task_1.SimpleTask("Tâche simple");
+const taskWithNote = new task_1.NotesDecorator(task, "Test note");
+const taskWithLabel = new task_1.LabelsDecorator(task, "Test label");
+const taskWithPrioritie = new task_1.PrioritiesDecorator(task, 1);
+console.log(taskWithNote.name());
 console.log(taskWithNote.getNote());
+console.log(taskWithLabel.name());
+console.log(taskWithLabel.getLabel());
+console.log(taskWithPrioritie.name());
+console.log(taskWithPrioritie.getPriorities());
 //# sourceMappingURL=index.js.map

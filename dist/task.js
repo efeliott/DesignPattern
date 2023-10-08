@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UrgentTasks = exports.PersonalTasks = exports.ProjectTasks = exports.notesDecorator = exports.SimpleTask = void 0;
+exports.UrgentTasks = exports.PersonalTasks = exports.ProjectTasks = exports.PrioritiesDecorator = exports.LabelsDecorator = exports.NotesDecorator = exports.SimpleTask = void 0;
 class SimpleTask {
     constructor(taskName) {
         this.taskName = taskName;
@@ -11,8 +11,8 @@ class SimpleTask {
     ;
 }
 exports.SimpleTask = SimpleTask;
-// Decorator
-class notesDecorator extends SimpleTask {
+// Decorator pour ajouter une note
+class NotesDecorator extends SimpleTask {
     constructor(tasks, note) {
         super(tasks.name());
         this.tasks = tasks;
@@ -27,7 +27,40 @@ class notesDecorator extends SimpleTask {
         return "Notes : " + this.note;
     }
 }
-exports.notesDecorator = notesDecorator;
+exports.NotesDecorator = NotesDecorator;
+// Decorator pour ajouter un label
+class LabelsDecorator extends SimpleTask {
+    constructor(tasks, label) {
+        super(tasks.name());
+        this.tasks = tasks;
+        this.label = label;
+        this.task = tasks;
+        this.taskLabels = label;
+    }
+    name() {
+        return this.task.name();
+    }
+    getLabel() {
+        return "Label : " + this.label;
+    }
+}
+exports.LabelsDecorator = LabelsDecorator;
+class PrioritiesDecorator extends SimpleTask {
+    constructor(tasks, prioritie) {
+        super(tasks.name());
+        this.tasks = tasks;
+        this.prioritie = prioritie;
+        this.task = tasks;
+        this.taskPriorities = prioritie;
+    }
+    name() {
+        return this.task.name();
+    }
+    getPriorities() {
+        return "Priorities level : " + this.prioritie;
+    }
+}
+exports.PrioritiesDecorator = PrioritiesDecorator;
 class ProjectTasks {
     constructor(taskName) {
         this.taskName = taskName;
